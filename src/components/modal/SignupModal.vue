@@ -24,10 +24,11 @@
               type="button" 
               class="btn-verify" 
               @click="sendVerificationCode"
-              :disabled="isEmailVerifying || !signupForm.email || !!emailError || emailDuplicateStatus === 'duplicate'"
+              :disabled="shouldDisableVerifyButton"
             >
               {{ isEmailVerifying ? '재전송' : '인증하기' }}
             </button>
+          
             <div v-else class="verification-success">
               <span class="success-icon">✓</span>
               인증완료
@@ -186,6 +187,16 @@ export default {
              this.isPasswordValid &&   // 비밀번호 형식 일치
              this.isPasswordConfirmValid &&
              this.isNameValid  // 닉네임 유효성 조건 추가
+    },
+    shouldDisableVerifyButton() {
+      // 재전송 상태일 때는 이메일 유효성만 체크
+      if (this.isEmailVerifying) {
+        return !this.signupForm.email || !!this.emailError
+      }
+      // 최초 인증 시에는 모든 조건 체크
+      return !this.signupForm.email || 
+             !!this.emailError || 
+             this.emailDuplicateStatus === 'duplicate'
     }
   },
   methods: {
