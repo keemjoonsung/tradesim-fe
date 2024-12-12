@@ -3,7 +3,7 @@
     <div class="header-container">
       <div class="left-section">
         <router-link to="/" class="logo-link">
-          모의투자
+          모두의투자
         </router-link>
         <nav class="nav-menu">
           <router-link to="/market" class="nav-link">거래소</router-link>

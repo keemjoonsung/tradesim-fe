@@ -5,6 +5,7 @@
       <h3>회원가입</h3>
       <form @submit.prevent="handleSignup">
         <div class="form-group email-section">
+          <label class="input-label">이메일</label>
           <div class="email-input-group">
             <div class="input-wrapper">
               <input 
@@ -59,6 +60,7 @@
         </div>
 
         <div class="form-group">
+          <label class="input-label">닉네임</label>
           <div class="input-wrapper">
             <input 
               type="text" 
@@ -76,6 +78,7 @@
         </div>
 
         <div class="form-group password-section">
+          <label class="input-label">비밀번호</label>
           <div class="input-wrapper">
             <input 
               type="password" 
@@ -103,6 +106,7 @@
         </div>
 
         <div class="form-group">
+          <label class="input-label">비밀번호 확인</label>
           <div class="input-wrapper">
             <input 
               type="password" 
@@ -497,7 +501,7 @@ h3 {
 .email-section {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 4px;
 }
 
 .email-input-group {
@@ -837,5 +841,13 @@ input {
 /* 마지막 form-group의 마진 조정 */
 .form-group:last-of-type {
   margin-bottom: 24px;
+}
+
+.input-label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #4E5968;
 }
 </style> 

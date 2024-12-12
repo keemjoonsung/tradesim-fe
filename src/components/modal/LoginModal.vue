@@ -5,20 +5,26 @@
       <h3>로그인</h3>
       <form @submit.prevent="handleLogin">
         <div class="form-group">
-          <input 
-            type="email" 
-            v-model="loginForm.email" 
-            placeholder="이메일"
-            required
-          >
+          <label class="input-label">이메일</label>
+          <div class="input-wrapper">
+            <input 
+              type="email" 
+              v-model="loginForm.email" 
+              placeholder="이메일"
+              required
+            >
+          </div>
         </div>
         <div class="form-group">
-          <input 
-            type="password" 
-            v-model="loginForm.password" 
-            placeholder="비밀번호"
-            required
-          >
+          <label class="input-label">비밀번호</label>
+          <div class="input-wrapper">
+            <input 
+              type="password" 
+              v-model="loginForm.password" 
+              placeholder="비밀번호"
+              required
+            >
+          </div>
         </div>
         <button type="submit" class="btn-primary btn-full">로그인</button>
       </form>
@@ -93,7 +99,7 @@ export default {
 }
 
 .form-group {
-  margin-bottom: 16px;
+  margin-bottom: 24px;
 }
 
 input {
@@ -149,5 +155,18 @@ h3 {
     width: 90%;
     margin: 0 20px;
   }
+}
+
+.input-label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #4E5968;
+}
+
+.input-wrapper {
+  position: relative;
+  width: 100%;
 }
 </style> 

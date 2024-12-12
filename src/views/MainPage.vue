@@ -29,25 +29,30 @@
       <footer class="footer">
         <div class="footer-content">
           <div class="footer-section">
-            <h3>모의투자</h3>
+            <h3>모두의투자</h3>
             <p>실전 같은 모의투자를 경험해보세요</p>
           </div>
           <div class="footer-section">
-            <h4>고객센터</h4>
-            <p>평일 09:00 - 18:00</p>
-            <p>Email: support@example.com</p>
+            <h4>문의</h4>
+            <a href="mailto:kjs99014@naver.com" 
+               class="email-link">
+              <i class="far fa-envelope"></i>
+              <span>kjs99014@naver.com</span>
+            </a>
           </div>
           <div class="footer-section">
             <h4>바로가기</h4>
-            <ul>
-              <li><a href="#">서비스 소개</a></li>
-              <li><a href="#">이용약관</a></li>
-              <li><a href="#">개인정보처리방침</a></li>
-            </ul>
+            <a href="https://github.com/keemjoonsung" 
+               class="github-link" 
+               target="_blank" 
+               rel="noopener noreferrer">
+              <i class="fab fa-github"></i>
+              <span>GitHub</span>
+            </a>
           </div>
         </div>
         <div class="footer-bottom">
-          <p>&copy; 2024 모의투자. All rights reserved.</p>
+          <p>&copy; 2024 모두의투자. All rights reserved.</p>
         </div>
       </footer>
     </div>
@@ -357,5 +362,41 @@ h3 {
     grid-template-columns: 1fr;
     gap: 30px;
   }
+}
+
+.github-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #4E5968;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  margin-bottom: 8px;
+}
+
+.github-link:hover {
+  color: #333D4B;
+}
+
+.github-link i {
+  font-size: 20px;
+}
+
+.email-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #4E5968;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  margin-bottom: 8px;
+}
+
+.email-link:hover {
+  color: #333D4B;
+}
+
+.email-link i {
+  font-size: 20px;
 }
 </style>
